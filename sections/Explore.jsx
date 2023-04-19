@@ -32,7 +32,7 @@ const Explore = () => {
               {...world}
               index={index}
               active={active}
-              handleClick={setActive}
+              OnMouseOver={setActive}
             />
           ))}
         </div>
