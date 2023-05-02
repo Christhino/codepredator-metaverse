@@ -1,9 +1,17 @@
+/* eslint-disable react/jsx-tag-spacing */
+/* eslint-disable semi */
+/* eslint-disable lines-around-directive */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable jsx-quotes */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/jsx-no-undef */
 'use client';
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
+import LangSwitcher from './LangSwitcher';
 
 const Navbar = () => {
   const translate = useTranslations();
@@ -26,11 +34,7 @@ const Navbar = () => {
         <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
           {translate('TITLE')}
         </h2>
-        <img
-          src="/menu.svg"
-          alt="menu"
-          className="w-[24px] h-[24px] object-contain"
-        />
+        <LangSwitcher/>
       </div>
     </motion.nav>
   );
