@@ -1,6 +1,6 @@
 import Head from 'next/head';
-
 import '../styles/globals.css';
+import { I18nProvider } from '../shared/translate';
 
 const MyApp = ({ Component, pageProps }) => (
   <>
@@ -11,7 +11,9 @@ const MyApp = ({ Component, pageProps }) => (
       <link rel="preconnect" href="https://stijndv.com" />
       <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
     </Head>
-    <Component {...pageProps} />
+    <I18nProvider>
+      <Component {...pageProps} />
+    </I18nProvider>
   </>
 );
 
