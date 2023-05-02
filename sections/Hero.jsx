@@ -1,9 +1,36 @@
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable react/no-children-prop */
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/function-component-definition */
+/* eslint-disable lines-around-directive */
+/* eslint-disable semi */
+/* eslint-disable no-unused-vars */
 'use client';
-
+import React, { Suspense } from 'react'
 import { motion } from 'framer-motion';
+
+import { Canvas } from '@react-three/fiber'
+import { Loader, useGLTF, OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
 
 import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+
+function Model({ url }) {
+  const { nodes } = useGLTF(url)
+  return (
+    <group rotation={[-Math.PI / 2, 0, 0]} position={[0, -7, 0]} scale={7}>
+      <group rotation={[Math.PI / 13.5, -Math.PI / 5.8, Math.PI / 5.6]}>
+        <mesh receiveShadow castShadow geometry={nodes.planet002.geometry} material={nodes.planet002.material} />
+        <mesh geometry={nodes.planet003.geometry} material={nodes.planet003.material} />
+      </group>
+    </group>
+  )
+}
 
 const Hero = () => (
   <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
