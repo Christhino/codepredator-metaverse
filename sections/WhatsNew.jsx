@@ -1,3 +1,10 @@
+/* eslint-disable import/named */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable semi */
+/* eslint-disable no-multi-spaces */
+/* eslint-disable react/jsx-tag-spacing */
+/* eslint-disable lines-around-directive */
+/* eslint-disable no-unused-vars */
 'use client';
 
 import { motion } from 'framer-motion';
@@ -6,6 +13,7 @@ import styles from '../styles';
 import { newFeatures } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
+import EarthCanvas  from  '../components/Earth'
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -33,11 +41,12 @@ const WhatsNew = () => (
         variants={planetVariants('right')}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        {/* <img
           src="/whats-new.png"
           alt="get-started"
           className="w-[90%] h-[90%] object-contain"
-        />
+        /> */}
+        {/* <EarthCanvas/> */}
       </motion.div>
     </motion.div>
   </section>
