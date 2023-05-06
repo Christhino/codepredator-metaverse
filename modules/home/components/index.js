@@ -1,12 +1,13 @@
+/* eslint-disable react/jsx-tag-spacing */
 /* eslint-disable jsx-quotes */
 import { Footer, Navbar } from '../../../components';
 import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../../../sections';
 
 const HomeComponent = () => (
   <div className="bg-primary-black overflow-hidden">
-    <div className='hero'>
+    <div >
       <Navbar />
-      <Hero />
+      <Hero/>
     </div>
     <div className="relative">
       <About />

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable react/jsx-indent-props */
 /* eslint-disable quotes */
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-multiple-empty-lines */
@@ -35,7 +37,7 @@ function Model({ url }) {
 }
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6 `}>
+  <section className={`py-16  sm:pl-16 pl-6 hero`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -86,6 +88,11 @@ const Hero = () => (
         </motion.div>
       </div>
       </motion.div>
+      <motion.div className="flex items-center">
+          <h1 className="relative  font-bold lg:text-[30px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[90px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] w-full flex justify-center items-center text-white">  
+              Scroll  to explore 
+          </h1>
+      </motion.div>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -93,28 +100,33 @@ const Hero = () => (
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-       {/* <motion.div>
-            <h1 className={styles.heroHeading}>intelligence</h1>
-        </motion.div> */}
-      <div className="relative xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary-white mb-1"
-            />
-          </div>
-        </a>
-      </div>
+      
+        <div className="relative xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+          
+          <a href="#about">
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="w-3 h-3 rounded-full bg-secondary-white mb-1"
+                
+              />
+              
+            </div>
+           
+          </a>
+        </div>
       </motion.div>
+      
+      
+
+      
   </section>
 );
 
