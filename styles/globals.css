@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif;
+  font-family: "Coolvetica", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +23,25 @@
   );
   filter: blur(125px);
 }
-
+.ligne {
+  margin-left: 19%;
+}
+.bottom-32 {
+  bottom: 0rem;
+}
+.hero {
+  background-image: url('../public/Header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.py-8 {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+.py-12 {
+  /* padding-top: 2rem; */
+  padding-bottom: 9rem;
+}
 .hero-gradient {
   background: linear-gradient(
     97.86deg,

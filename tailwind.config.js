@@ -9,6 +9,12 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 5s linear infinite', // Animation de rotation lente de 3 secondes
+      },
+      animationDuration: {
+        '5s': '5s', // Animation de 5 secondes
+      },
       colors: {
         'primary-black': '#1A232E',
         'secondary-white': '#c7c7c7',
