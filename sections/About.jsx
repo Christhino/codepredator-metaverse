@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-multi-spaces */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable lines-around-directive */
 /* eslint-disable import/no-duplicates */
@@ -56,7 +57,9 @@ const About = () => {
             </motion.div>
             
           </motion.div>
-          <hr className="border-t-2 border-gray-400 my-4"></hr>
+          <motion.div className={`${styles.innerWidth} mx-auto`}>
+           <hr className="border-t-2 border-gray-400 my-4"></hr>
+          </motion.div>
           <motion.div
             variants={staggerContainer}
             initial="hidden"
